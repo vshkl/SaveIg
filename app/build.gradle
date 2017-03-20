@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "by.vshkl.android.instagramdownloader"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "0.1.0"
+        vectorDrawables.useSupportLibrary = true
+        resConfigs "en"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            debuggable true
+            applicationIdSuffix ".debug"
+            versionNameSuffix '-DEBUG'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.github.hotchemi:permissionsdispatcher:2.3.2'
+    apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
+    compile 'com.afollestad.material-dialogs:core:0.9.4.1'
+    compile 'com.tapadoo.android:alerter:1.0.6'
+    compile 'pl.bclogic:pulsator4droid:1.0.3'
+    compile 'org.jsoup:jsoup:1.10.2'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.6'
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SaveIg</string>
+
+    <string name="message_service_disabled">Download service disabled</string>
+    <string name="message_service_enabled">Download service enabled</string>
+
+    <string name="permission_rationale_title">Write external storage</string>
+    <string name="permission_rationale_message">Allow <b>SaveIg</b> to write external storage?</string>
+    <string name="permission_rationale_allow">Allow</string>
+    <string name="permission_rationale_deny">Deny</string>
+    <string name="permission_denied_title">WRITE_EXTERNAL_STORAGE permission denied</string>
+
+    <string name="notification_title">SaveIg is running</string>
+    <string name="notification_content">SaveIg intercepts copied instagram links</string>
+
+</resources>
