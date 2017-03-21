@@ -76,12 +76,12 @@ public class ClipboardService extends Service implements ClipboardManager.OnPrim
     }
 
     private void addDownloadTask(final String imageUrl) {
-        String sb = Constants.DOWNLOAD_DIR +
+        String sunDirectory = Constants.DOWNLOAD_DIR +
                 File.separator +
                 System.currentTimeMillis() +
                 Constants.IMAGE_EXTENSION;
         DownloadManager.Request downloadRequest = new DownloadManager.Request(Uri.parse(imageUrl));
-        downloadRequest.setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, sb);
+        downloadRequest.setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, sunDirectory);
         downloadManager.enqueue(downloadRequest);
     }
 }
