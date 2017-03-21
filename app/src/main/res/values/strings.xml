@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">SaveIg</string>
 
-    <string name="message_service_disabled">Download service disabled</string>
-    <string name="message_service_enabled">Download service enabled</string>
+    <string name="message_service_disabled">Download service stopped</string>
+    <string name="message_service_enabled">Download service started</string>
 
     <string name="permission_rationale_title">Write external storage</string>
     <string name="permission_rationale_message">Allow <b>SaveIg</b> to write external storage?</string>
