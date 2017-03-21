@@ -5,7 +5,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "by.vshkl.android.instagramdownloader"
+        applicationId "by.vshkl.android.saveig"
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1
@@ -44,7 +44,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.2'
     apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.2'
-    compile 'com.afollestad.material-dialogs:core:0.9.4.1'
+    compile 'com.github.javiersantos:MaterialStyledDialogs:2.1'
     compile 'com.tapadoo.android:alerter:1.0.6'
     compile 'pl.bclogic:pulsator4droid:1.0.3'
     compile 'org.jsoup:jsoup:1.10.2'
