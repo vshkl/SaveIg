@@ -2,6 +2,7 @@ package by.vshkl.android.saveig;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.text.Html;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -31,6 +32,22 @@ class DialogHelper {
                     @Override
                     public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
                         request.cancel();
+                    }
+                })
+                .build()
+                .show();
+    }
+
+    static void showHowToDialog(final Context context) {
+        new MaterialStyledDialog.Builder(context)
+                .setStyle(Style.HEADER_WITH_TITLE)
+                .setTitle(R.string.how_to_title)
+                .setDescription(R.string.how_to_message)
+                .setPositiveText(R.string.how_to_close)
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
+                    @Override
+                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                        dialog.hide();
                     }
                 })
                 .build()

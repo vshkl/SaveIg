@@ -8,6 +8,17 @@
     android:layout_height="match_parent"
     tools:context="by.vshkl.android.saveig.MainActivity">
 
+    <ImageView
+        android:id="@+id/iv_question"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:padding="16dp"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_question"
+        tools:ignore="ContentDescription"
+        />
+
     <com.google.android.gms.ads.NativeExpressAdView
         android:id="@+id/av_nativeAd"
         android:layout_width="wrap_content"
@@ -16,8 +27,8 @@
         ads:adSize="360x132"
         ads:adUnitId="@string/banner_ad_unit_id"
         ads:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         />
 
     <pl.bclogic.pulsator4droid.library.PulsatorLayout
@@ -25,8 +36,8 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         ads:layout_constraintBottom_toTopOf="@id/av_nativeAd"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:pulse_color="@color/colorAccent"
         app:pulse_count="10"
@@ -44,8 +55,8 @@
         android:padding="32dp"
         android:scaleType="centerCrop"
         ads:layout_constraintBottom_toTopOf="@id/av_nativeAd"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_power"
         tools:ignore="ContentDescription"

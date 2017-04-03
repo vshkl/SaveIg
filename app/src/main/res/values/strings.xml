@@ -10,6 +10,10 @@
     <string name="permission_rationale_deny">Deny</string>
     <string name="permission_denied_title">WRITE_EXTERNAL_STORAGE permission denied</string>
 
+    <string name="how_to_title">How to use app</string>
+    <string name="how_to_message">1. Click start button.\n2. Open instagram photo.\n3. Click <b>"Cope Share URL"</b>.\n4. Photo will be saved to gallery.</string>
+    <string name="how_to_close">Close</string>
+
     <string name="notification_title">SaveIg is running</string>
     <string name="notification_content">SaveIg intercepts copied instagram links</string>
 
