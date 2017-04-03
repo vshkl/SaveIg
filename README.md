@@ -8,6 +8,6 @@
 
 <div style="display:flex;" >
 <img src="https://github.com/vshkl/SaveIg/blob/master/screenshots/screenshot_1.png" width="32%" >
-<img style="margin-left:10px;" src="https://github.com/vshkl/SaveIg/blob/master/screenshots/screenshot_3.png" width="32%" >
 <img style="margin-left:10px;" src="https://github.com/vshkl/SaveIg/blob/master/screenshots/screenshot_2.png" width="32%" >
+<img style="margin-left:10px;" src="https://github.com/vshkl/SaveIg/blob/master/screenshots/screenshot_3.png" width="32%" >
 </div>
