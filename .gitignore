@@ -48,4 +48,5 @@ captures/
 *.jks
 
 app/google-services.json
+app/src/main/res/values/strings_ad.xml
 gradle.properties

@@ -10,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.NativeExpressAdView;
 import com.tapadoo.alerter.Alerter;
 
 import permissions.dispatcher.NeedsPermission;
@@ -29,8 +32,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(getApplicationContext(), getString(R.string.banner_ad_app_id));
+        initializeAd();
+
         plSwitch = (PulsatorLayout) findViewById(R.id.pl_switch);
         findViewById(R.id.ib_switch).setOnClickListener(this);
+
         serviceRunning = isClipboardServiceRunning(ClipboardService.class);
         if (serviceRunning) {
             plSwitch.start();
@@ -97,5 +105,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             }
         }
         return false;
+    }
+
+    private void initializeAd() {
+        NativeExpressAdView avNativeAd = (NativeExpressAdView) findViewById(R.id.av_nativeAd);
+        avNativeAd.loadAd(new AdRequest.Builder().build());
     }
 }
