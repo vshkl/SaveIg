@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         plSwitch = (PulsatorLayout) findViewById(R.id.pl_switch);
         findViewById(R.id.ib_switch).setOnClickListener(this);
+        findViewById(R.id.iv_question).setOnClickListener(this);
 
         serviceRunning = isClipboardServiceRunning(ClipboardService.class);
         if (serviceRunning) {
@@ -47,14 +48,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     @Override
     public void onClick(View view) {
-        if (serviceRunning) {
-            serviceRunning = false;
-            plSwitch.stop();
-            stopService();
-            showAlert(R.string.message_service_disabled, R.color.colorAlertGreen, R.drawable.ic_check,
-                    Constants.DURATION_SHORT);
-        } else {
-            MainActivityPermissionsDispatcher.startServiceWithCheck(MainActivity.this);
+        switch (view.getId()) {
+            case R.id.ib_switch:
+                handleServiceStartStop();
+                break;
+            case R.id.iv_question:
+                DialogHelper.showHowToDialog(MainActivity.this);
+                break;
         }
     }
 
@@ -110,5 +110,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void initializeAd() {
         NativeExpressAdView avNativeAd = (NativeExpressAdView) findViewById(R.id.av_nativeAd);
         avNativeAd.loadAd(new AdRequest.Builder().build());
+    }
+
+    private void handleServiceStartStop() {
+        if (serviceRunning) {
+            serviceRunning = false;
+            plSwitch.stop();
+            stopService();
+            showAlert(R.string.message_service_disabled, R.color.colorAlertGreen, R.drawable.ic_check,
+                    Constants.DURATION_SHORT);
+        } else {
+            MainActivityPermissionsDispatcher.startServiceWithCheck(MainActivity.this);
+        }
     }
 }
